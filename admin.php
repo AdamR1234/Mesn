@@ -38,7 +38,7 @@
 </div>
 <h1><?php echo $name,"'s Admin Panel" ?> </h1>
 <h3>Events awaiting approval</h3>
-<a href="http://www.adamroe.x10host.com/home.php">Home</a><br><br>
+<a href="/home.php">Home</a><br><br>
 <?php 
 $conn = include('./conn.php');
 // Check connection

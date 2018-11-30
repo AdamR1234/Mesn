@@ -63,7 +63,7 @@ $sql = "SELECT Count(ReceiveID) as num FROM Message WHERE mRead=0 AND ReceiveID 
 	echo("<a href='inbox.php'>".$count . " New messages</a><br>");
 
 if($_SESSION['Priv'] == 1){
-	 echo "<a href='http://www.adamroe.x10host.com/admin.php'>Admin Panel</a><br>";
+	 echo "<a href='/admin.php'>Admin Panel</a><br>";
 	 }
 
 

@@ -70,14 +70,15 @@ if(isset($_POST['submit']))
 		}
 		
 		
-			$sql = "SELECT * FROM User WHERE Username = '$user'";
-	 $result = mysqli_query($conn,$sql);
-	$num_rows = $result->num_rows;
+		$sql = "SELECT * FROM User WHERE Username = '$user'";
+	 	$result = mysqli_query($conn,$sql);
+		$num_rows = $result->num_rows;
 
 	if($num_rows == 0)
-	{
-		$sql = "INSERT INTO User (Username, Password, Priv, Userimage, Status) VALUES ('$user', '$saltypassword','0','images/userimg82783121.png','0')";
+	{ 
+		$sql = "INSERT INTO User (Username, Password, Priv, Userimage, Status) VALUES ('$user', '$saltypassword',0,'images/userimg82783121.png',0)";
 		$result = mysqli_query($conn, $sql);
+
 		echo "<script>alert('New record created successfully')</script>";
 	}
 	else
