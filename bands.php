@@ -165,14 +165,7 @@ Venue Suggestions
   
 <datalist id="bands">
 <?php 
-	$servername = "localhost";
-	$username = "adamroex_ok";
-	$password = "Turnip10";
-	$dbname = "adamroex_roe";
-
-
-		
-	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	$conn = include('conn.php');
 	$sql = "SELECT BandID, BandName FROM Bands";
 	$result = mysqli_query($conn,$sql);
 	while($row = $result->fetch_assoc())
