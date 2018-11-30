@@ -107,7 +107,16 @@ if(isset($_GET['deletesubmit']))
 if(isset($_GET['EventLinkID']))
 {
 	$suggestion = $_GET['EventLinkID'];
-	$sql = "SELECT User.Username,User.UserID,User.Status,User.Userimage,UserEventLink.UserEventID FROM User, UserEventLink WHERE User.UserID = UserEventLink.UserID AND UserEventLink.EventLinkID = $suggestion ORDER BY Status DESC;";
+	$sql = "SELECT User.Username,
+				   User.UserID,
+				   User.Status,
+				   User.Userimage,
+				   UserEventLink.UserID 
+			FROM User, 
+				 UserEventLink 
+			WHERE User.UserID = UserEventLink.UserID 
+			AND UserEventLink.EventLinkID = $suggestion 
+			ORDER BY Status DESC;";
 
 	$result = mysqli_query($conn,$sql);
 	$suggestionid = 0;
